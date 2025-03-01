@@ -48,7 +48,7 @@ def upload_to_pinata(file_path, api_key, api_secret):
 
 
 options = ("Generate Certificate", "View Certificates")
-selected = st.selectbox("", options, label_visibility="hidden")
+selected = st.selectbox("Select an option", options, label_visibility="hidden")
 
 if selected == options[0]:
     form = st.form("Generate-Certificate")
@@ -60,7 +60,7 @@ if selected == options[0]:
     submit = form.form_submit_button("Submit")
     if submit:
         pdf_file_path = "certificate.pdf"
-        institute_logo_path = "../assets/logo.jpg"
+        institute_logo_path = "../assets/logo.png"
         generate_certificate(pdf_file_path, uid, candidate_name, course_name, org_name, institute_logo_path)
 
         # Upload the PDF to Pinata

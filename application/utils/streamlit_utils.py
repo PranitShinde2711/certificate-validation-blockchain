@@ -33,20 +33,18 @@ def view_certificate(certificate_id):
 
 def hide_icons():
     hide_st_style = """
-				<style>
-				#MainMenu {visibility: hidden;}
-				footer {visibility: hidden;}
-				</style>"""
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        </style>"""
     st.markdown(hide_st_style, unsafe_allow_html=True)
-
 
 def hide_sidebar():
     no_sidebar_style = """
-    			<style>
-        		div[data-testid="stSidebarNav"] {visibility: hidden;}
-    			</style>"""
+        <style>
+        div[data-testid="stSidebarNav"] {visibility: hidden;}
+        </style>"""
     st.markdown(no_sidebar_style, unsafe_allow_html=True)
-
 
 def remove_whitespaces():
     st.markdown("""

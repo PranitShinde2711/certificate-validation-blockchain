@@ -1,3 +1,4 @@
+
 import pyrebase
 from dotenv import load_dotenv
 import os
@@ -23,13 +24,14 @@ def register(email, password):
         auth.create_user_with_email_and_password(email, password)
         return "success"
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error during registration: {e}")
         return "failure"
+
 
 def login(email, password):
     try:
         auth.sign_in_with_email_and_password(email, password)
         return "success"
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error during login: {e}")
         return "failure"

@@ -1,13 +1,12 @@
 import streamlit as st
 from PIL import Image
-from utils.streamlit_utils import hide_icons, hide_sidebar, remove_whitespaces
 from streamlit_extras.switch_page_button import switch_page
 
-st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
-hide_icons()
-hide_sidebar()
-remove_whitespaces()
+# Initialize session state attributes
+if "profile" not in st.session_state:
+    st.session_state.profile = None
 
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
 st.title("Certificate Validation System")
 st.write("")
